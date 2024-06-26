@@ -45,12 +45,16 @@ double takeTan(double a)
 {
 	return tan(a);
 }
+double takelog(double a)
+{
+    return log(a);
+}
 int main()
 {
 	double a=0, b=0, op, ans = 0, rag;
 	char choice;
 	cout << "Enter   1 to Add\n\t2 to Subtract\n\t3 to Divide\n\t4 to Multiply\n\t5 to take Mod\n";
-	cout << "\t6 to take Power a^b\n\t7 to take Square root of a\n\t8 to take sin of a\n\t9 to take cos of a\n\t10 to take tan of a";
+	cout << "\t6 to take Power a^b\n\t7 to take Square root of a\n\t8 to take sin of a\n\t9 to take cos of a\n\t10 to take tan of a\n\t11 to take log of a";
 	do
 	{
 		cout << "\nEnter operation: ";
@@ -64,7 +68,7 @@ int main()
 			cout << "Enter b: ";
 			cin >> b;
 		}
-		else if (rag >= 7 && rag <= 10)
+		else if (rag >= 7 && rag <= 11)
 		{
 			cout << "Enter input value: \n";
 			cout << "Enter a: ";
@@ -114,6 +118,10 @@ int main()
 		{
 			ans = takeTan(a);
 		}
+		else if(op == 11)
+        	{
+            		ans = takelog(a);
+        	}
 		else
 		{
 			return 0;
